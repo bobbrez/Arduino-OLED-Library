@@ -17,7 +17,7 @@ firmware with the file listed above, or make sure you have the latest from 4DSys
 
 ----------------------------------------------------------------------------------------
 
-Basic Set Up
+Basic Commands of OLED Library
 
 OLED myOLED(7,8,2500,57600); 
 //pinPower, pinReset, baudRate, startUpTimer
@@ -49,9 +49,15 @@ myOLED.DrawRectangle (x,y,width,height,color);
 myOLED.DrawCircle (x,y,radius,color);
 //Draws a circle from the listed x,y at the radius with listed color value
 	
-SetFontSize		
-DrawText		
-DrawSingleChar	
-CopyPast		
-SaveBitChar		
-DisplayBitChar
+myOLED.SetFontSize(8);	
+//Set Font size using 00hex : 5x7 small 01hex : 8x8 medium 02hex : 8x12 large
+
+myOLED.DrawText(column, row, fontSize, *mytext, color)	
+//Display text at the column and row listed with font size and listed color. *myText is an array of characters.
+myOLED.DrawSingleChar
+	
+myOLED.CopyPast		
+
+myOLED.SaveBitChar	
+	
+myOLED.DisplayBitChar
