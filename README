@@ -1,0 +1,57 @@
+   ___          __     _             ____  __   _______    __   _ __                    
+  / _ | _______/ /_ __(_)__  ___    / __ \/ /  / __/ _ \  / /  (_) /  _______ _______ __
+ / __ |/ __/ _  / // / / _ \/ _ \  / /_/ / /__/ _// // / / /__/ / _ \/ __/ _ `/ __/ // /
+/_/ |_/_/  \_,_/\_,_/_/_//_/\___/  \____/____/___/____/ /____/_/_.__/_/  \_,_/_/  \_, / 
+                                                                                 /___/  
+OLED Library file for the Arduino platform. This Library will contain the basic drawing 
+and displaying functions for the 4D Systems OLED display modules. 
+
+My Circuit Design is also using an NPN Transistor to act as a power on switch from the
+Arduino board. This allows the Arduino to power up first and start the code before giving
+power to the Display which can cause damage. 
+
+Note this file is currently working with the original PMMC File
+uOLED-96-G1-uSD-Serial_rev1.pmmc
+If you are not able to get the display working correctly, please try updating your OLED
+firmware with the file listed above, or make sure you have the latest from 4DSystems.
+
+----------------------------------------------------------------------------------------
+
+Basic Set Up
+
+OLED myOLED(7,8,2500,57600); 
+//pinPower, pinReset, baudRate, startUpTimer
+
+myOLED.Init();
+//Turn on OLED Display
+
+myOLED.Clear();
+//Clear Screen
+  
+myOLED.ResetDisplay();
+//Resets Display Unit
+
+myOLED.get16bitRGB(random(255),random(255),random(255));
+//Returns the RGB color value in two bytes for the OLED
+
+myOLED.PenSize(size);
+//Set pixel size of pen
+	
+myOLED.PutPixel(x,y,color);
+//Places a pixel on the screen at x and y with listed color value
+
+myOLED.DrawLine	(x,y,x2,y2,color);
+//Draws a line from the listed x,y to the x2,y2 with listed color value	
+
+myOLED.DrawRectangle (x,y,width,height,color);
+//Draws a rectangle from the listed x,y at the width and height with listed color value	
+	
+myOLED.DrawCircle (x,y,radius,color);
+//Draws a circle from the listed x,y at the radius with listed color value
+	
+SetFontSize		
+DrawText		
+DrawSingleChar	
+CopyPast		
+SaveBitChar		
+DisplayBitChar
