@@ -12,25 +12,25 @@ OLED			KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-ResetDisplay		KEYWORD2
+ResetDisplay	KEYWORD2
 Init			KEYWORD2
 Clear			KEYWORD2
 get16bitRGB		KEYWORD2
 PutPixel		KEYWORD2
 DrawLine		KEYWORD2
-DrawRectangle		KEYWORD2
+DrawRectangle	KEYWORD2
 DrawCircle		KEYWORD2
 SetFontSize		KEYWORD2
 DrawText		KEYWORD2
-DrawSingleChar		KEYWORD2
+DrawSingleChar	KEYWORD2
 CopyPast		KEYWORD2
 SaveBitChar		KEYWORD2
-DisplayBitChar		KEYWORD2
+DisplayBitChar	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
 color			LITERAL1
-col			LITERAL1
-row			LITERAL1
+col				LITERAL1
+row				LITERAL1
